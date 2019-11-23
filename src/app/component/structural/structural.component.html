@@ -21,5 +21,37 @@
   <ng-template #elseNotEnough>
     <h2> Chưa đủ tuổi</h2>
   </ng-template>
-
 </div>
+<hr>
+<hr>
+<h1> Thực hành *ngFor</h1>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let item of names ">
+    {{item}}
+  </li>
+</ul>
+<table class="table table-bordered table-hover">
+  <thead>
+  <tr>
+    <th>STT</th>
+    <th>Tên</th>
+    <th>Giá</th>
+  </tr>
+  </thead>
+  <tbody>
+<tr *ngFor="let item of product; let i = index; let f = first; let l = last;
+    let e = even;
+    let o = odd; trackBy: myTrackByFunction "
+    [style.background-color]="f === true ? 'cyan' : 'green'"
+    [style.background-color]="(l === true) ? 'red' : (f === true) ? 'cyan' : 'green'"
+    [style.background-color]="e === true ? 'red' : 'blue'"
+    >
+
+  <td>{{i+1}}{{f}}{{l}}</td>
+  <td>{{item.name}}</td>
+  <td>{{item.price}}VNĐ</td>
+</tr>
+</tbody>
+
+</table>
+<button type="button" class="btn btn-warning" (click)="onLoadData()">Lấy Dữ Liệu</button>
