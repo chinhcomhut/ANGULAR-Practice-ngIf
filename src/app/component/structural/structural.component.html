@@ -1,0 +1,25 @@
+<h1 *ngIf="isShow">Họ tên: {{username}}</h1>
+<button type="button" class="btn btn-danger" (click)="onClick()">Click Me!</button>
+<hr>
+<div class="radio">
+  <label>
+    <input type="radio" name="rdCheck" (click)="onChange(true)"> Hợp Lệ
+  </label>
+  <label>
+    <input type="radio" name="rdCheck" (click)="onChange(false)"> Không Hợp Lệ
+  </label>
+  <h3 *ngIf="isCheck; else elseBlock">Hợp lệ</h3>
+  <ng-template #elseBlock>
+    <h3>Không hợp lệ</h3>
+  </ng-template>
+  <div class="form-group">
+    <label> Tuổi: </label>
+    <input type="number" class="form-control" [ngModel]="age">
+  </div>
+<h3 *ngIf="age>18; then enoughBlock else elseNotEnough"> Đủ tuổi</h3>
+  <ng-template #enoughBlock></ng-template>
+  <ng-template #elseNotEnough>
+    <h2> Chưa đủ tuổi</h2>
+  </ng-template>
+
+</div>
