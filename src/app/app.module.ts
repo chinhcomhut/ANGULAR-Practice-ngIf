@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StructuralComponent } from './component/structural/structural.component';
 import {FormsModule} from '@angular/forms';
+import { AtributeComponent } from './component/atribute/atribute.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StructuralComponent
+    StructuralComponent,
+    AtributeComponent
   ],
   imports: [
     BrowserModule,
