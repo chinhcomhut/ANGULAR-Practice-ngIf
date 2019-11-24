@@ -55,3 +55,19 @@
 
 </table>
 <button type="button" class="btn btn-warning" (click)="onLoadData()">Lấy Dữ Liệu</button>
+<hr>
+<hr>
+<h1> Practice *ngSwitch</h1>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let user of users"[ngSwitch]="user.country">
+    <span *ngSwitchCase="'VN'" class="text-primary">
+      {{user.name}}-{{user.country}}
+    </span>
+    <span *ngSwitchCase="'USA'" class="text-danger">
+      {{user.name}} - {{user.country}}
+    </span>
+    <span *ngSwitchDefault>
+      {{user.name}} - {{user.country}}
+    </span>
+  </li>
+</ul>

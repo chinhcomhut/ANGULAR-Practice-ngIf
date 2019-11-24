@@ -56,6 +56,24 @@ public product: any[] = [
       price: 50000
     }
     ]
+  public  users: any[] = [
+    {
+      name: 'Chính',
+      country: 'USA'
+    },
+    {
+      name: 'Thanh',
+      country: 'VN'
+    },
+    {
+      name: 'Hiệu',
+      country: 'England'
+    },
+    {
+      name: 'Linh',
+      country: 'Nga'
+    }
+  ]
   constructor() { }
   onClick() {
     this.isShow = !this.isShow;
